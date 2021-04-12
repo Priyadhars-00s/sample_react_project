@@ -14,6 +14,7 @@ function Department() {
         );
     });
   
+    
       return (
         <div>
           <h2>Departments Data...</h2>
