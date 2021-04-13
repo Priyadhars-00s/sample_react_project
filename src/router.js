@@ -18,10 +18,12 @@ function App() {
     //   };
 //   onKeyPress={this.onEnter}
    login = (e) => {
-    e.setisAutheticated(true);
+    if(e.setisAutheticated === 'true'){
+        e.preventDefault()
+    }
     console.log("loggedInUser:" + isAutheticated)
   };
-  onkeypress={login}
+  this.onClick={login}
 
 //   function logout(){
 //     setisAutheticated(false);
@@ -29,15 +31,19 @@ function App() {
 //   }
 // }
  logout = (e) => {
-    e.setisAutheticated(false);
+    if(e.setisAutheticated === 'false'){
+        e.preventDefault()
+    }
     console.log("loggedInUser:" + isAutheticated)
   };
-  onkeypress={logout}
+  this.onClick={logout}
   
 class RouterComp extends Component {
     constructor(props){
         super(props)
-       
+       this.state={
+           Employee:[]
+    }
         console.log(this.props)
         }
         
