@@ -1,18 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {BrowserRouter, Link, Switch, Route} from 'react-router-dom';
-import Employee from './employee';
-import Department from './department';
-import Project from './project';
+import App from './App';
 
-function App(){
-  return(
-    <div>
-      
-        <App />
-      
-    </div>
-  )
-}
 
-ReactDOM.render(<BrowserRouter><App></App></BrowserRouter>,document.getElementById("root"));
+ReactDOM.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+  document.getElementById('root')
+);
