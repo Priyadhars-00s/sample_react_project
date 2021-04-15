@@ -1,6 +1,6 @@
 import React, {useState, Component} from 'react';
 import ReactDOM from 'react-dom';
-import {Link, Switch, Router, Route} from 'react-router-dom';
+import {Link, Switch, Route, Router} from 'react-router-dom';
 import Employee from './employee';
 import Department from './department';
 import Project from './project';
@@ -8,51 +8,51 @@ import Error from './error';
 import Protected from './protected';
 import Unprotected from './unprotected';
 import Home from './homepage';
-
-function App() {
-    const[isAutheticated, setisAutheticated] = useState(false);
+import { createMemoryHistory } from 'history'
+const history = createMemoryHistory()
+//const[isAutheticated, setisAutheticated] = useState(false);
+    
     // onEnter = (e) => {
     //     if (e.key === 'Enter') {
     //       e.preventDefault()
     //     }
     //   };
 //   onKeyPress={this.onEnter}
-   login = (e) => {
-    if(e.setisAutheticated === 'true'){
-        e.preventDefault()
-    }
-    console.log("loggedInUser:" + isAutheticated)
-  };
-  this.onClick={login}
-
-//   function logout(){
-//     setisAutheticated(false);
-//     console.log("loggedInUser:" + isAutheticated)
-//   }
-// }
- logout = (e) => {
-    if(e.setisAutheticated === 'false'){
-        e.preventDefault()
-    }
-    console.log("loggedInUser:" + isAutheticated)
-  };
-  this.onClick={logout}
+   
   
 class RouterComp extends Component {
     constructor(props){
         super(props)
        this.state={
-           Employee:[]
-    }
+        isAutheticated : ' '
+    };
         console.log(this.props)
         }
-        
+        login = (e) => {
+          if(e.isAutheticated === 'true'){
+              e.preventDefault()
+          }
+          //console.log("loggedInUser:" + isAutheticated)
+        };
+             
+      //   function logout(){
+      //     setisAutheticated(false);
+      //     console.log("loggedInUser:" + isAutheticated)
+      //   }
+      // }
+       logout = (e) => {
+          if(e.isAutheticated === 'false'){
+              e.preventDefault()
+          }
+         // console.log("loggedInUser:" + isAutheticated)
+        };
+      
         
     render()
     {
         return(
             <div>
-            <Router>
+            <Router history={history}>
             
             <h2>Welcome to App Component...</h2>
             <ul>
@@ -78,9 +78,9 @@ class RouterComp extends Component {
           </Link>
           </li>
         </ul>
-        <button onClick={this.login}>Login</button>
+        <button onClick={this.props.login}>Login</button>
         <br/>
-        <button onClick={this.logout}>Logout</button>
+        <button onClick={this.props.logout}>Logout</button>
                 <Switch>
 
               <Route path="/employees" component={this.props.Employee}></Route>
@@ -98,5 +98,5 @@ class RouterComp extends Component {
     }
       
 }
-}
+
 export default RouterComp;

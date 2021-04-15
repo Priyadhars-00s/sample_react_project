@@ -15,13 +15,15 @@ function Employee() {
     });
 
     useEffect(() => {
-      setAppState({ loading: true });
+      const setAppState = async () => 
+       ({ loading: true });
       const apiUrl = 'https://api.github.com/users/hacktivist123/repos';
       axios.get(apiUrl).then((repos) => {
         const allRepos = repos.data;
         setAppState({ loading: false, repos: allRepos });
       });
-    }, [setAppState]);
+      setAppState();
+    }, []);
 
     onclick = () => {
 
