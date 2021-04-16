@@ -10,14 +10,20 @@ import CreateData from "./component/CreateData"
 import DataLists from "./component/DataList";
 import Header from "./component/Header";
 import Crud from "./component/Crud";
+import Employee from './component/employee';
+import PersonList from './component/getPost';
+import Authenticate from './component/authenticate';
 
 function App() {
   return(
     <div>
         
-        <RouterComp />
+         <RouterComp />
         <Header />
-        <Crud />
+        <Crud /> 
+         <Employee /> 
+         <PersonList />
+          <Authenticate /> 
         
             
     </div>
