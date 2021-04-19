@@ -6,13 +6,17 @@ import {BrowserRouter, Link, Switch, Route} from 'react-router-dom';
 // import Project from './project';
 import RouterComp from './component/router';
 import { Grid } from "@material-ui/core";
-import CreateData from "./component/CreateData"
-import DataLists from "./component/DataList";
-import Header from "./component/Header";
-import Crud from "./component/Crud";
-import Employee from './component/employee';
+import CreateData from "./component/CRUD/CreateData"
+import DataLists from "./component/CRUD/DataList";
+import Header from "./component/CRUD/Header";
+import Crud from "./component/CRUD/Crud";
+import Employee from './component/APIcalls/employee';
 import PersonList from './component/getPost';
-import Authenticate from './component/authenticate';
+import Authenticate from './component/Authentication/authenticate';
+import Store from './Mobx and Redux/MobxStore';
+import { observer } from 'mobx-react';
+import MobxApp from './Mobx and Redux/Mobx';
+import ReduxApp from './Mobx and Redux/Redux';
 
 function App() {
   return(
@@ -21,9 +25,12 @@ function App() {
          <RouterComp />
         <Header />
         <Crud /> 
-         <Employee /> 
+         <Employee />   
          <PersonList />
           <Authenticate /> 
+          <Store />
+         <MobxApp />
+          <ReduxApp />
         
             
     </div>

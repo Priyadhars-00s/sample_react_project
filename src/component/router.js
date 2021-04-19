@@ -1,13 +1,13 @@
 import React, {useState, Component} from 'react';
 import ReactDOM from 'react-dom';
 import {Link, Switch, Route, Router} from 'react-router-dom';
-import Employee from './employee';
-import Department from './department';
-import Project from './project';
-import Error from './error';
-import Protected from './protected';
-import Unprotected from './unprotected';
-import Home from './homepage';
+import Employee from './APIcalls/employee';
+import Department from './APIcalls/department';
+import Project from './APIcalls/project';
+import Error from './APIcalls/error';
+import Protected from './APIcalls/protected';
+import Unprotected from './APIcalls/unprotected';
+import Home from './APIcalls/homepage';
 import { createMemoryHistory } from 'history'
 const history = createMemoryHistory()
   
