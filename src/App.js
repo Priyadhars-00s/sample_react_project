@@ -16,25 +16,43 @@ import Authenticate from './component/Authentication/authenticate';
 import Store from './Mobx and Redux/MobxStore';
 import { observer } from 'mobx-react';
 import MobxApp from './Mobx and Redux/Mobx';
-import ReduxApp from './Mobx and Redux/Redux';
+import ReduxApp from './Mobx and Redux/pages/counter';
+import Head from './component/ReduxFundametals/features/header/Head';
+import TodoList from './component/ReduxFundametals/features/todos/TodoList';
+import Footer from './component/ReduxFundametals/features/footer/Footer';
 
 function App() {
   return(
     <div>
         
-         <RouterComp />
+        <RouterComp />
         <Header />
         <Crud /> 
-         <Employee />   
-         <PersonList />
-          <Authenticate /> 
-          <Store />
-         <MobxApp />
-          <ReduxApp />
+         {/* <Employee />    */}
+        <PersonList /> 
+        <Authenticate /> 
+        <Store />
+        <MobxApp /> 
+        <ReduxApp />
         
-            
-    </div>
-      
+{/*   
+         <nav>
+      <section>
+        <h1>Redux Fundamentals Example</h1>
+      </section>
+    </nav>
+    <main>
+      <section className="medium-container">
+        <h2>Todos</h2>
+        <div className="todoapp">
+          <Head />
+          <TodoList />
+          <Footer />
+        </div>
+      </section>
+    </main> */}
+
+   </div>   
   );
 }
 
