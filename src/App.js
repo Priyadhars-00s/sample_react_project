@@ -20,6 +20,7 @@ import ReduxApp from './Mobx and Redux/pages/counter';
 import Head from './component/ReduxFundametals/features/header/Head';
 import TodoList from './component/ReduxFundametals/features/todos/TodoList';
 import Footer from './component/ReduxFundametals/features/footer/Footer';
+import Redux from './component/ReactPhotos/containers/Redux';
 
 function App() {
   return(
@@ -34,9 +35,9 @@ function App() {
         <Store />
         <MobxApp /> 
         <ReduxApp />
-        
-{/*   
-         <nav>
+              {/* <Redux /> */}
+ 
+         {/* <nav>
       <section>
         <h1>Redux Fundamentals Example</h1>
       </section>
@@ -50,10 +51,13 @@ function App() {
           <Footer />
         </div>
       </section>
-    </main> */}
+    </main>  */}
 
    </div>   
   );
+
+
+
 }
 
 export default App;

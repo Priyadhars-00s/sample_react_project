@@ -16,12 +16,13 @@ function ProtectedRoute({
           return <Component logout={logout} />;
         } else {
           return (
-            <Redirect to={{ pathname: "/", state: { from: props.location } }} />
+           <Redirect to={{ pathname: "/", state: { from: props.location } }} />
           );
         }
       }}
     />
   );
 }
+//console.log("Protectedroute", state)
 
 export default ProtectedRoute;
